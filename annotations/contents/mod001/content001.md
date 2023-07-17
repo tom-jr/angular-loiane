@@ -28,7 +28,7 @@ Open source
 
 Seria view, o que o usuário ira ver.
 
-![img](/docs/assets/img/intrp_001.png)
+![img](/annotations/assets/img/intrp_001.png)
 
 **Template:** código HTML que será renderizado para o usuário
 **Metadata:** Permite o Angular ler as class e fazer o processamento
@@ -41,7 +41,7 @@ Seria view, o que o usuário ira ver.
 Aplicações em Angular são feitas orientadas a componentes. Tudo na aplicação
 ira ser um componente
 
-![img](/docs/assets/img/intrp_002.png)
+![img](/annotations/assets/img/intrp_002.png)
 
 Temos um componente Pai(***root***)
 Cada componente pode ter um componente.
@@ -54,7 +54,7 @@ componentes.
 
 **Serviços** podem ser injetados em outros componentes
 
-![img](/docs/assets/img/intrp_003.png)
+![img](/annotations/assets/img/intrp_003.png)
 
 ## Router
 No Angular também se trabalha com o conceito de **SPA**(Single, Page, Application)
@@ -64,4 +64,4 @@ Para o gerenciamento das mesmas, utilizaremos as **Rotas**(Router)
 
 Diretivas são responsáveis por modificar elementos DOM e/ou seu comportamento.
 
-![img](/docs/assets/img/intrp_004.png)
+![img](/annotations/assets/img/intrp_004.png)

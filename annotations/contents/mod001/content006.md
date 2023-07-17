@@ -8,7 +8,7 @@ e validações com a class de serviço
 
 esquema ideal de fluxo de dados e logica.
 
-![img](/docs/assets/img/intro_008.png)
+![img](/annotations/assets/img/intro_008.png)
 
 ## Criar um service
 

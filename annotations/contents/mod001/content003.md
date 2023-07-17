@@ -20,13 +20,13 @@ ng serve #roda o projeto inicial na porta 4200 do localhost
 
 Abrindo o navegador na URL localhost:4200 veremos:
 
-![](/docs/assets/img/intro_005.png)
+![](/annotations/assets/img/intro_005.png)
 
 ## Criar componentes
 No caminho do diretório do projeto **src/app** é onde iremos criar os nossos ***components***
 nele poderemos ver uma estrutura inicial ja formada
 
-![](/docs/assets/img/intro_006.png)
+![](/annotations/assets/img/intro_006.png)
 
 - A priori iremos criar um component manualmente. Então no diretório de src/app criaremos uma nova
 pasta com o nome de ***meu-primeiro-component***
@@ -87,7 +87,7 @@ Apos rodar o comando o CLI criar o component na pasta de app e ja vinculará o c
 no declarations do app.modules.
 os arquivos criados são:
 
-![](/docs/assets/img/intro_007.png)
+![](/annotations/assets/img/intro_007.png)
 
  
 
