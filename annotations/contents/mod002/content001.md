@@ -52,7 +52,7 @@ chaves, assim renderizando seu valor no template.
 ~~~
 
 Saida:
-![img](/docs/assets/img/data-binding_001.png)
+![img](/annotations/assets/img/data-binding_001.png)
 
 
 Na  interpolação é possível adicionar expressões logicas e matemáticas.

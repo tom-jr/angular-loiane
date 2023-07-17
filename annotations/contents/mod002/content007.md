@@ -1,6 +1,6 @@
 # Ciclo de vida de component
 
-![img](/docs/assets/img/ciclo_vida_component_001.png)
+![img](/annotations/assets/img/ciclo_vida_component_001.png)
 
 ***ngOnInit*** é um dos métodos que mais se usa
 

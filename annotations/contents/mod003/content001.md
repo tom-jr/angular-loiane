@@ -2,14 +2,14 @@
 
 ## Comandos CLI
 
-![img](/docs/assets/img/cli_001.png)
+![img](/annotations/assets/img/cli_001.png)
 
 # Escolher pre-processador
 
-![img](/docs/assets/img/cli_002.png)
+![img](/annotations/assets/img/cli_002.png)
 
 
-![img](/docs/assets/img/cli_003.png)
+![img](/annotations/assets/img/cli_003.png)
 
 
 ## Ng Lint
