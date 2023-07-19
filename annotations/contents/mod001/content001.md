@@ -31,8 +31,11 @@ Seria view, o que o usuário ira ver.
 ![img](/annotations/assets/img/intrp_001.png)
 
 **Template:** código HTML que será renderizado para o usuário
+
 **Metadata:** Permite o Angular ler as class e fazer o processamento
+
 **Data_Binding:**  Dados a serem mostrados na tela. Componente consegue conversar com o template.
+
 **Comportamento_da_view:**  junção de tres itens: ***template***, ***controller*** e ***escopo***
 
 
