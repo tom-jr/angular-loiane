@@ -42,12 +42,12 @@ Seria view, o que o usuário ira ver.
 ### Component
 
 Aplicações em Angular são feitas orientadas a componentes. Tudo na aplicação
-ira ser um componente
+irá ser um componente
 
 ![img](/annotations/assets/img/intrp_002.png)
 
 Temos um componente Pai(***root***)
-Cada componente pode ter um componente.
+Cada componente pode ter componentes.
 
 ## Serviços
 
@@ -55,13 +55,13 @@ Os componentes podem faz integração com servidor.
 Utilizamos ***Serviços*** para não escrever toda a logica em nossos
 componentes.
 
-**Serviços** podem ser injetados em outros componentes
+**Serviços** podem ser injetados em outros componentes.
 
 ![img](/annotations/assets/img/intrp_003.png)
 
 ## Router
 No Angular também se trabalha com o conceito de **SPA**(Single, Page, Application)
-Para o gerenciamento das mesmas, utilizaremos as **Rotas**(Router)
+Para o gerenciamento das mesmas, utilizaremos as **Rotas**(Router).
 
 ## Diretivas
 

@@ -13,7 +13,7 @@
         - Diretivas
 
 - [**Ambiente de desenvolvimento**](/annotations/contents/mod001/content002.md)
-    - Instalação do Node, Typescript e Angular/CLI
+    - Instalação do Node e Angular/CLI
 
 - [**Primeiro Projeto**](/annotations/contents/mod001/content003.md)
     - Criar Projeto
