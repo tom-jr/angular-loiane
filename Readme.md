@@ -23,6 +23,7 @@
 - [**Módulos**](/annotations/contents/mod001/content004.md)
     - Composição do modulo
     - Gerar modulo
+    - Expor components de um módulo para outro
     - StyleGuide
 
 - [**Templates**](/annotations/contents/mod001/content005.md)
