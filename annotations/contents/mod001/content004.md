@@ -63,7 +63,7 @@ $ ng g component moduloY/new-component
 Os components serão automaticamente declarados em seus respectivos módulos.
 
 Para poder usar o selector do componente de outro module é necessário fazer duas etapas
-1. No modulo Pai do component que deseja expor no app root adicionar o component no metadado de exports
+1. No modulo Pai do component que deseja expor, adicionar o component no metadado de exports
 2. No AppModule root importar o modulo Pai
 ## StyleGuide
 
