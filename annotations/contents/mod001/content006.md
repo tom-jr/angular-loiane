@@ -42,10 +42,10 @@ export class CursosService {
 
 Vamos utilizar a injeção de dependência para poder adicionar uma instancia
 do serviço no template.
-O que nos possibilita a fazer essa injeção é o decorator ***@Injectable***
+O que nos possibilita torna nosso serviço injetavél é o decorator ***@Injectable***
 
 A injeção sera feita via **constructor**:
-No paramento do construtor adicionamos uma instancia do service
+No paramento do construtor. Adicionamos uma instancia do service
 
 ~~~ javascript
 @Component({
