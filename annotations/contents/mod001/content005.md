@@ -1,12 +1,13 @@
 ## Templates 
 
-É a parte da View que sera renderizado ao usuário
+É a parte da View que sera renderizado ao usuário.
 Todo componente tem o seu template. Seja por meio de templateUrl ou template literal.
-Vamos criar um exemplo de apresentação de dados definidos no component e apresentar no template
+Vamos criar um exemplo de apresentação de dados definidos no component e apresentar no template.
 
 
-Neste exemplo estamos criando duas variáveis sendo uma um array, e e iremos fazer o dataBinding no template do componente
-apresentando as duas variáveis.
+Neste exemplo estamos criando duas variáveis sendo uma um array, e iremos fazer o dataBinding do componente para o template
+afim de apresentar as duas variáveis na view(template).
+
 ~~~ javascript
 export class CursoComponent{
     nomePortal: string;
