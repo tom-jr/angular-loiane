@@ -41,8 +41,13 @@ export class CursosService {
 ~~~
 
 Vamos utilizar a injeção de dependência para poder adicionar uma instancia
-do serviço no template.
-O que nos possibilita torna nosso serviço injetavél é o decorator ***@Injectable***
+do serviço em nosso component.
+O que nos possibilita torna nosso serviço injetável é o decorator ***@Injectable***. No exemplo acima ele tem um objeto
+como parâmetro informando que ele será provido para todo e qualquer component de qualquer modulo. Quando dizemos provido,
+queremos dizer que o component que desejar usar suas funções poderá injetá-lo sem problemas.
+
+Caso o serviço não estiver com **providedIn: root**. Precisaríamos declarar nosso service no decorator providers do módulo
+qual queremos utilizar.
 
 A injeção sera feita via **constructor**:
 No paramento do construtor. Adicionamos uma instancia do service
