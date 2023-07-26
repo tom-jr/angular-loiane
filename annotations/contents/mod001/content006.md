@@ -47,7 +47,7 @@ como parâmetro informando que ele será provido para todo e qualquer component 
 queremos dizer que o component que desejar usar suas funções poderá injetá-lo sem problemas.
 
 Caso o serviço não estiver com **providedIn: root**. Precisaríamos declarar nosso service no decorator providers do módulo
-qual queremos utilizar.
+qual queremos utilizar o serviço.
 
 A injeção sera feita via **constructor**:
 No paramento do construtor. Adicionamos uma instancia do service
