@@ -1,7 +1,7 @@
 # Property Binding e Interpolação
 
 ## Data Binding
-Associar informações que estão no component e vice-versa
+Associar dados dos templates com os componentes e vice-versa.
 
 **Interpolação**: Pegar o valor de um método ou atributo e alterar a Saida em um template
 |Template| ---- {{valor}} ----> |Component|
