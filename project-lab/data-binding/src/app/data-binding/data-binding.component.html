@@ -1,0 +1,18 @@
+<section class="property-binding">
+
+  <article>
+    <h3>Interpolation</h3>
+    <p>String renderizada com interpolation: <a href="{{url}}"> {{url}} </a></p>
+    <p>Interpolação de expressão matemática: 1 + 1 = {{1 + 1}}</p>
+    <p>Interpolação de expressão matemática com chamada de método: 1 + 1 + 1 = {{1 + twoTermsSum(1, 1)}}</p>
+    <p>Interpolação de expressões booleans: <b>true</b> || <b>false</b> = {{true || false}}</p>
+    <p>Interpolação de expressões booleans: <b>true</b> && <b>false</b> = {{true && false}}</p>
+  </article>
+
+  <article>
+    <h3>Property-binding</h3>
+    <img ngSrc="{{urlImage}}" width="400" height="300">
+    <img [ngSrc]="urlImage" width="400" height="300">
+    <img bind-ngSrc="urlImage" width="400" height="300">
+  </article>
+</section>

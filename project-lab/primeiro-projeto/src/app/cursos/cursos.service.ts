@@ -1,12 +1,13 @@
-import { Injectable } from '@angular/core';
-import {CursosComponent} from "./cursos.component";
+import {Injectable} from '@angular/core';
 import {CursosModule} from "./cursos.module";
 
-@Injectable({providedIn:CursosModule})
+@Injectable({providedIn: CursosModule})
 export class CursosService {
 
 
-  constructor() { }
+  constructor() {
+  }
+
   portalUrl: string = 'https://loiane-trainer.com';
 
   getCursos() {
