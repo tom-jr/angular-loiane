@@ -95,13 +95,13 @@ declarations. Então podemos rodar o projeto novamente e verificar o render.
 ## Criar component com o CLI
 Agora como o component criado e renderizado na página inicial, vamos criar um component via CLI. 
 No diretório do projeto rodamos:
-
+Podemos add no final do comando o -s para dispensar a criação do arquivo spec de testes.
 ~~~ bash
-ng g component nome-component
+ng g component nome-component -s
 # ou
-ng generate component meu-segundo
+ng generate component meu-segundo -s
 # ou
-ng g c meu-segundo
+ng g c meu-segundo -s
 ~~~
 
 Apos rodar o comando o CLI criar o component na pasta de app e ja declara o component
