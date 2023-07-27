@@ -86,5 +86,28 @@ e sim o nome da propriedade do template entre colchetes
 - Formato padrão é através de bind-property_name bind-src = "value"
 - Quando não existe uma propriedade no elemento, usa-se [attr.colspan]
 
+## Exemplos
+Usamos o ngSrc do angula por motivos de optimização da img
 
+- Podemos decidir se vamos usar a Interpolation ou propertyBind. Um não exclui o outro. Pois como mostrado no exemplo, a casos que não se tem uma propriedade para receber
+valor, então adicionamos a interpolação. 
+~~~ html
+<section class="property-binding">
 
+  <article>
+    <h3>Interpolation</h3>
+    <p>String renderizada com interpolation: <a href="{{url}}"> {{url}} </a></p>
+    <p>Interpolação de expressão matemática: 1 + 1 = {{1 + 1}}</p>
+    <p>Interpolação de expressão matemática com chamada de método: 1 + 1 + 1 = {{1 + twoTermsSum(1, 1)}}</p>
+    <p>Interpolação de expressões booleans: <b>true</b> || <b>false</b> = {{true || false}}</p>
+    <p>Interpolação de expressões booleans: <b>true</b> && <b>false</b> = {{true && false}}</p>
+  </article>
+
+  <article>
+    <h3>Property-binding</h3>
+    <img ngSrc="{{urlImage}}" width="400" height="300">
+    <img [ngSrc]="urlImage" width="400" height="300">
+    <img bind-ngSrc="urlImage" width="400" height="300">
+  </article>
+</section>
+~~~
