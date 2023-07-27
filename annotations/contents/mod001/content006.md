@@ -46,7 +46,29 @@ O que nos possibilita torna nosso serviço injetável é o decorator ***@Injecta
 como parâmetro informando que ele será provido para todo e qualquer component de qualquer modulo. Quando dizemos provido,
 queremos dizer que o component que desejar usar suas funções poderá injetá-lo sem problemas.
 
-Caso o serviço não estiver com **providedIn: root**. Precisaríamos declarar nosso service no decorator providers do módulo
+## @Injectable()
+- Podemos apresentar sem metadados. Dessa forma precisamos declarar no provides do modulo em que desejamos disponibilizar
+o serviço
+
+```typescript
+@Injectable()
+export class serviceService {}
+```
+
+- Podemos informar o modulo que desejamos prover. Sendo possível apenas um módulo informado.
+```typescript
+@Injectable({providedIn: ModuleX})
+export class serviceService {}
+```
+
+- Podemos informar o providedIn como 'root' assim todo e qualquer módulo poderá injetar.
+```typescript
+@Injectable({providedIn: 'root'})
+export class serviceService {}
+```
+
+
+- Caso o serviço não estiver com **providedIn: root**. Precisaríamos declarar nosso service no decorator providers do módulo
 qual queremos utilizar o serviço.
 
 A injeção sera feita via **constructor**:

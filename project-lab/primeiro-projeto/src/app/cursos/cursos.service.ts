@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
+import {CursosComponent} from "./cursos.component";
+import {CursosModule} from "./cursos.module";
 
-@Injectable()
+@Injectable({providedIn:CursosModule})
 export class CursosService {
 
 
