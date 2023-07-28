@@ -8,8 +8,9 @@ $ npm install bootstrap
 ~~~
 
 Para configurar o uso do mesmo é necessário ir até o arquivo 
-**angular.json** que é o arquivo de configuração do projeto Angular
-no objeto JSON de options tem as chaves de style e scripts que tem como
+**angular.json** que é o arquivo de configuração do projeto Angular.
+
+No objeto JSON de options tem as chaves de style e scripts que tem como
 valores um array. Em style adicionamos o caminho do arquivo ***bootstrap.min.css***
 o path considera como se ja estivesse no node-modules. Então basicamente adicionamos 
 **/bootstrap/...** --> ***"bootstrap/dist/css/bootstrap.min.css"***
@@ -18,6 +19,12 @@ O mesmo equivale para o script
 ***"bootstrap/dist/js/bootstrap.bundle.min.js"*** Adicione o value no array de scripts.
 
 Agora o projeto pode utilizar-se do BootStrap tranquilamente.
+
+Podemos adicionar o css diretamento no style.css com o **@import**
+
+~~~ css
+@import url("bootstrap/dist/css/bootstrap-grid.min.css");
+~~~
 
 
 ## Class Binding
