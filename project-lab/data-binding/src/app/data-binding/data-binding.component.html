@@ -1,18 +1,57 @@
-<section class="property-binding">
+<div class="container">
+  <section class="property-binding">
 
-  <article>
-    <h3>Interpolation</h3>
-    <p>String renderizada com interpolation: <a href="{{url}}"> {{url}} </a></p>
-    <p>Interpolação de expressão matemática: 1 + 1 = {{1 + 1}}</p>
-    <p>Interpolação de expressão matemática com chamada de método: 1 + 1 + 1 = {{1 + twoTermsSum(1, 1)}}</p>
-    <p>Interpolação de expressões booleans: <b>true</b> || <b>false</b> = {{true || false}}</p>
-    <p>Interpolação de expressões booleans: <b>true</b> && <b>false</b> = {{true && false}}</p>
-  </article>
+    <article *ngIf="aula == 1">
+      <h3>Interpolation</h3>
+      <p>String renderizada com interpolation: <a href="{{url}}"> {{url}} </a></p>
+      <p>Interpolação de expressão matemática: 1 + 1 = {{1 + 1}}</p>
+      <p>Interpolação de expressão matemática com chamada de método: 1 + 1 + 1 = {{1 + twoTermsSum(1, 1)}}</p>
+      <p>Interpolação de expressões booleans: <b>true</b> || <b>false</b> = {{true || false}}</p>
+      <p>Interpolação de expressões booleans: <b>true</b> && <b>false</b> = {{true && false}}</p>
+    </article>
 
-  <article>
-    <h3>Property-binding</h3>
-    <img ngSrc="{{urlImage}}" width="400" height="300">
-    <img [ngSrc]="urlImage" width="400" height="300">
-    <img bind-ngSrc="urlImage" width="400" height="300">
-  </article>
-</section>
+    <article *ngIf="aula == 1">
+      <h3>Property-binding</h3>
+      <img ngSrc="{{urlImage}}" width="400" height="300">
+      <img [ngSrc]="urlImage" width="400" height="300">
+      <img bind-ngSrc="urlImage" width="400" height="300">
+    </article>
+
+    <article *ngIf="aula == 2">
+      <label class="col-form-label-lg">Selecione o Alerta a exibir</label>
+      <select  [(ngModel)]="model" class="form-select" aria-label="Default select example">
+        <option *ngFor="let option of options" value="{{option.value}}">{{option.label}}</option>
+      </select>
+
+      <div class="alert" [class.alert-primary]="model == 'alert-primary'" [style.display]="model == 'alert-primary' ? 'block':'none'" role="alert">
+        A simple primary alert—check it out!
+      </div>
+      <div class="alert " role="alert" [class.alert-secondary]="model == 'alert-secondary'" [style.display]="model == 'alert-secondary' ? 'block':'none'">
+        A simple secondary alert—check it out!
+      </div>
+      <div class="alert " [class.alert-success]="model == 'alert-success'" role="alert" [style.display]="model == 'alert-success' ? 'block':'none'">
+        A simple success alert—check it out!
+      </div>
+      <div class="alert " [class.alert-danger]="model == 'alert-danger'" role="alert" [style.display]="model == 'alert-danger' ? 'block':'none'">
+        A simple danger alert—check it out!
+      </div>
+      <div class="alert " [class.alert-warning]="model == 'alert-warning'" role="alert" [style.display]="model == 'alert-warning' ? 'block':'none'">
+        A simple warning alert—check it out!
+      </div>
+      <div class="alert " [class.alert-info]="model == 'alert-info'" role="alert" [style.display]="model == 'alert-info' ? 'block':'none'">
+        A simple info alert—check it out!
+      </div>
+      <div class="alert " [class.alert-light]="model == 'alert-light'" role="alert" [style.display]="model == 'alert-light' ? 'block':'none'">
+        A simple light alert—check it out!
+      </div>
+      <div class="alert " [class.alert-dark]="model == 'alert-dark'" role="alert" [style.display]="model == 'alert-dark' ? 'block':'none'">
+        A simple dark alert—check it out!
+      </div>
+
+
+      <div class="alert {{model}} d-flex" role="alert">
+        Muda de acordo com a seleção
+      </div>
+    </article>
+  </section>
+</div>
