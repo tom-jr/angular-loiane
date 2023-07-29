@@ -46,7 +46,7 @@ Ex:
 ~~~ html
 A classe backgroundColorGreen deixa a div da cor verde. Mas será verde apenas se 
 o attributor boolean for true
-<div [class.backgroundColorGreen]= "attBoolean"> 
+<div [class.backgroundColorGreen]= "expressãoBooleana"> 
 
 </div>
 ~~~
