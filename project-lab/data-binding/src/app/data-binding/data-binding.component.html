@@ -19,32 +19,40 @@
 
     <article *ngIf="aula == 2">
       <label class="col-form-label-lg">Selecione o Alerta a exibir</label>
-      <select  [(ngModel)]="model" class="form-select" aria-label="Default select example">
+      <select [(ngModel)]="model" class="form-select" aria-label="Default select example">
         <option *ngFor="let option of options" value="{{option.value}}">{{option.label}}</option>
       </select>
 
-      <div class="alert" [class.alert-primary]="model == 'alert-primary'" [style.display]="model == 'alert-primary' ? 'block':'none'" role="alert">
+      <div class="alert" [class.alert-primary]="model == 'alert-primary'"
+           [style.display]="model == 'alert-primary' ? 'block':'none'" role="alert">
         A simple primary alert—check it out!
       </div>
-      <div class="alert " role="alert" [class.alert-secondary]="model == 'alert-secondary'" [style.display]="model == 'alert-secondary' ? 'block':'none'">
+      <div class="alert " role="alert" [class.alert-secondary]="model == 'alert-secondary'"
+           [style.display]="model == 'alert-secondary' ? 'block':'none'">
         A simple secondary alert—check it out!
       </div>
-      <div class="alert " [class.alert-success]="model == 'alert-success'" role="alert" [style.display]="model == 'alert-success' ? 'block':'none'">
+      <div class="alert " [class.alert-success]="model == 'alert-success'" role="alert"
+           [style.display]="model == 'alert-success' ? 'block':'none'">
         A simple success alert—check it out!
       </div>
-      <div class="alert " [class.alert-danger]="model == 'alert-danger'" role="alert" [style.display]="model == 'alert-danger' ? 'block':'none'">
+      <div class="alert " [class.alert-danger]="model == 'alert-danger'" role="alert"
+           [style.display]="model == 'alert-danger' ? 'block':'none'">
         A simple danger alert—check it out!
       </div>
-      <div class="alert " [class.alert-warning]="model == 'alert-warning'" role="alert" [style.display]="model == 'alert-warning' ? 'block':'none'">
+      <div class="alert " [class.alert-warning]="model == 'alert-warning'" role="alert"
+           [style.display]="model == 'alert-warning' ? 'block':'none'">
         A simple warning alert—check it out!
       </div>
-      <div class="alert " [class.alert-info]="model == 'alert-info'" role="alert" [style.display]="model == 'alert-info' ? 'block':'none'">
+      <div class="alert " [class.alert-info]="model == 'alert-info'" role="alert"
+           [style.display]="model == 'alert-info' ? 'block':'none'">
         A simple info alert—check it out!
       </div>
-      <div class="alert " [class.alert-light]="model == 'alert-light'" role="alert" [style.display]="model == 'alert-light' ? 'block':'none'">
+      <div class="alert " [class.alert-light]="model == 'alert-light'" role="alert"
+           [style.display]="model == 'alert-light' ? 'block':'none'">
         A simple light alert—check it out!
       </div>
-      <div class="alert " [class.alert-dark]="model == 'alert-dark'" role="alert" [style.display]="model == 'alert-dark' ? 'block':'none'">
+      <div class="alert " [class.alert-dark]="model == 'alert-dark'" role="alert"
+           [style.display]="model == 'alert-dark' ? 'block':'none'">
         A simple dark alert—check it out!
       </div>
 
@@ -52,6 +60,26 @@
       <div class="alert {{model}} d-flex" role="alert">
         Muda de acordo com a seleção
       </div>
+    </article>
+
+    <article *ngIf="aula == 3">
+
+      <div class="container-sm">
+        <div class="container-sm">
+          <button type="button" class="btn btn-primary" (click)="onClick()"> Click on me</button>
+        </div>
+
+        <div class="mb-3">
+          <label class="input-group">Input</label>
+          <input  class="form-control" type="text" (keyup)="onKeyUp($event)">
+        </div>
+
+        <div class="mb-3">
+          <label class="input-group">Input easy way</label>
+          <input  #input class="form-control" type="text" (keyup)="onKeyUp2(input.value)">
+        </div>
+      </div>
+
     </article>
   </section>
 </div>
