@@ -9,7 +9,7 @@ export class DataBindingComponent {
 
   url: string = 'https://www.loaine.com';
   urlImage: string = 'http://lorempixel.com.br/500/400/?1';
-  aula = 3;
+  aula = 4;
   options = [
     {label: 'Primary', value: 'alert-primary'},
     {label: 'Secondary', value: 'alert-secondary'},
@@ -21,6 +21,9 @@ export class DataBindingComponent {
     {label: 'Dark', value: 'alert-dark'}
   ];
   model!: string;
+  name!: any;
+  name2!: any;
+  name3!: any;
 
   twoTermsSum(num1: number, num2: number): number {
     return num1 + num2;
@@ -36,6 +39,12 @@ export class DataBindingComponent {
 
   onKeyUp2(value: string) {
     console.log(value);
+
+  }
+
+  onInput(value: string, n= 0) {
+
+    n == 0 ? this.name = value : this.name2 = value;
 
   }
 }

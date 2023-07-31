@@ -1,9 +1,7 @@
 # Two way
-O two way data binding é quando queremos manter
-os valores atualizados no template e componente ao mesmo tempo
+Utilizamos o two way data binding quando queremos manter os valores atualizados no template e componente ao mesmo tempo
 
-Vamos iniciar um exemplo de estrutura two way
-vamos atribuir ao value do input a variável do component chamado
+Exemplo da estrutura two way. Vamos atribuir ao value do input a variável do component chamado
 name
 ~~~ html
 <input
@@ -11,11 +9,9 @@ name
 />
 ~~~
 
-No caso se voce mudar o valor do input a var não ira mudar o seu
-para que ocorra essa atualização usamos o **(input)** onde podemos 
-disparar uma função a qualquer mudança no elemento DOM. No caso vamos 
-lançar um function com o próprio value de parâmetro e atribuir o valor 
-a variável  name.
+Caso mudar o valor do input a variável não ira mudar o seu. Para atualizar usamos o **(input)** onde podemos 
+disparar uma função a qualquer mudança no elemento DOM. Vamos lançar um function com o próprio value de parâmetro e 
+atribuir o valor a variável name.
 
 ~~~ html
 <input #var1

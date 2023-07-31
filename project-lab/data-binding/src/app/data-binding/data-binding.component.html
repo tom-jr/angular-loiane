@@ -81,5 +81,29 @@
       </div>
 
     </article>
+
+    <article *ngIf="aula == 4">
+      <h2>Tow way dataBinding</h2>
+<div class="container-sm">
+  <input #in [value]="name"
+         (input)="onInput(in.value)"
+         class="form-control" type="text" placeholder="nome" aria-label="default input example">
+  <label class="col-form-label-lg">{{name}}</label>
+</div>
+
+<div class="container-sm">
+  <h3>Exemplo Utilizando o ngModel e ngModelChange</h3>
+  <input #in2 [ngModel]="name2"
+         (ngModelChange)="onInput(in2.value, 2)"
+         class="form-control" type="text" placeholder="nome" aria-label="default input example">
+  <label class="col-form-label-lg">{{name2}}</label>
+</div>
+<div class="container-sm">
+  <h3>Exemplo Utilizando o [(ngModel)]</h3>
+  <input #in3 [(ngModel)]="name3"
+         class="form-control" type="text" placeholder="nome" aria-label="default input example">
+  <label class="col-form-label-lg">{{name3}}</label>
+</div>
+    </article>
   </section>
 </div>
