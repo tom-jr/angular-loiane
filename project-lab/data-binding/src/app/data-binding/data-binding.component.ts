@@ -9,7 +9,7 @@ export class DataBindingComponent {
 
   url: string = 'https://www.loaine.com';
   urlImage: string = 'http://lorempixel.com.br/500/400/?1';
-  aula = 4;
+  aula = 5;
   options = [
     {label: 'Primary', value: 'alert-primary'},
     {label: 'Secondary', value: 'alert-secondary'},
@@ -24,6 +24,8 @@ export class DataBindingComponent {
   name!: any;
   name2!: any;
   name3!: any;
+
+  propertySend = 'Hello World!';
 
   twoTermsSum(num1: number, num2: number): number {
     return num1 + num2;
