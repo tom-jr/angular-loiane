@@ -113,5 +113,13 @@
         <app-input [property-custom]="propertySend"></app-input>
       </div>
     </article>
+
+    <article *ngIf="aula == 6">
+      <div class="container-sm">
+        <h3>Output property</h3>
+        <app-output [valorInicial]="num" (valorEmit)="onEmitValue($event)"></app-output>
+        <label class="col-form-label-lg"> valor emitido do component: {{valorEmitido}}</label>
+      </div>
+    </article>
   </section>
 </div>

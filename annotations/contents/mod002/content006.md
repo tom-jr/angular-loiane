@@ -1,27 +1,28 @@
 # Output
 
-Pode fazer emissão(output) de Evento quando declara o método **emit(***param***)**
-e seu param pode ser any objeto. 
+com o decorator @Output podemos emitir valores de um component para o outro. Basta criar um campo com o decorator sendo
+uma instancia de EventEmitter. EventEmitter é o objeto que fará a emissão de um objeto de any type que definirmos.
 
+A emissão do objeto fica é realizada pelo método emit(object: any), que recebe um param estruturado a nossa necessidade.
 ~~~ javascript
-valueChanged = new EventEmitter();
+@Output('valueChanged') valueChanged = new EventEmitter();
 
 valueChanged.emit(object);
 ~~~
+No elemento do nosso component será possível capturar a emissão que criamos com bind de evento. O evento terá o nome
+da variável ou com o nome que definirmos no decorator.
 
-no objeto de emitir o valor adicionamos o ***@Output('name')*** para dar output
-desse valor a quem utilizar o selector do component emissor.
-~~~ javascript
-@Output('emitValue') valueChanged = new EventEmitter();
-~~~
+A emissão será tratada por um método. Esse método precisar passar o **$event** como param para poder ter o objeto emitido.
 
-No selector ficar assim:
-~~~ html
-<componentX (emitValue)="functionReceptorEmission()"></componentX>
-~~~
+```html
+<component (valueChanged) ="handleEmission($event)"></component>
+```
 
-Toda vez que o método emit for disparado no component o seu selector também
-dispara o evento assim rodando a function do component que recebeu o output.
+```typescript
+export class ComponetRoot {
 
-    Obs: a function functionReceptorEmission() sera do component que esta recebendo
-    o selector que emit.
+    handleEmission(event: any) {
+        console.log(`Object from EventEmitter ${event}`)
+    }
+}
+```
