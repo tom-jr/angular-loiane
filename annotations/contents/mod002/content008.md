@@ -13,4 +13,15 @@ a variável do component com a do element
 ~~~
 
 Agora as propriedades da tag HTML estão atribuídas a variável element
+Para acessar o value basta acessar o nativeElement.value
 
+```typescript
+import {ViewChild} from "@angular/core";
+class X {
+    @ViewChild('element') variable: any;
+    
+    onInput() {
+        console.log(this.variable.nativeElement.value);
+    }
+}
+```

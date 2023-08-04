@@ -121,5 +121,13 @@
         <label class="col-form-label-lg"> valor emitido do component: {{valorEmitido}}</label>
       </div>
     </article>
+
+    <article *ngIf="aula == 7">
+      <div class="container-sm">
+        <h3>Uso do ViewChild</h3>
+        <label class="col-form-label-lg">Name</label>
+        <input type="text" #input (input)="inputChange()">
+      </div>
+    </article>
   </section>
 </div>

@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-data-binding',
@@ -9,7 +9,7 @@ export class DataBindingComponent {
 
   url: string = 'https://www.loaine.com';
   urlImage: string = 'http://lorempixel.com.br/500/400/?1';
-  aula = 6;
+  aula = 7;
   options = [
     {label: 'Primary', value: 'alert-primary'},
     {label: 'Secondary', value: 'alert-secondary'},
@@ -24,6 +24,8 @@ export class DataBindingComponent {
   name!: any;
   name2!: any;
   name3!: any;
+
+  @ViewChild('input') element: any;
 
   propertySend = 'Hello World!';
   num = 10;
@@ -55,5 +57,9 @@ export class DataBindingComponent {
   onEmitValue(event: { valorEmitido: number }) {
     console.log(event)
     this.valorEmitido = event.valorEmitido;
+  }
+
+  inputChange() {
+    console.log(this.element.nativeElement.value);
   }
 }
