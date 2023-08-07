@@ -17,3 +17,6 @@ existente do array cursos e renderizar o mesmo.
 **Diretivas Estruturais**: Interagem com a view e modificam a estrutura do DOM e/ou código HTML [*ngFor, *ngIf]
 
 **Diretivas de Atributos**: Interagem com o elemento em que foram aplicadas.  [ng-class, ng-style]
+
+![img](/annotations/assets/img/2023-08-07_06-20.png)
+
