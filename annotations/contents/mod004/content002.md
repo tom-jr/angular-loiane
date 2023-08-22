@@ -1,6 +1,6 @@
 ## O que faz?
- semelhante ao if das linguagens de programação. Vamos levar o mesmo comportamento
-dessa logica do if para o template.
+ Semelhante ao if das linguagens de programação. Vamos levar o mesmo comportamento
+dessa logica do if para os templates.
 
 Ex da estrutura:
 
@@ -8,11 +8,11 @@ Ex da estrutura:
 <h1 *ngIf = "expression">Content</h1>
 ~~~
 
-esse elemento so ira renderizar na tela caso a expressão for satisfeita.
-Caso contrario não aparece.
+esse elemento so irá renderizar na tela caso a expressão for satisfeita.
+Caso contrario, não aparece.
 
-Uma opção que é bem semelhante é o hidden. Porem a diferenças em níveis de consumo e segurança
-O ngIf consome mais recursos e o hidden permite que o elemento fique visível nas ferramentas de DEV
+Uma opção bem semelhante é o hidden. Sendo diferente em níveis de consumo e segurança.
+O ngIf consome mais recursos e o hidden permite que o elemento fique visível nas ferramentas de DEV.
 
 Recomenda-se usar o hidden para arvores pequenas e o ng If para arvores DOM grandes.
 
@@ -22,15 +22,14 @@ Exemplo do hidden:
 <h1 [hidden] = "expression">Content</h1>
 ~~~
 
-Uma forma de usar o else em ngIf :
+Forma de usar o else com ngIf:
 
 ~~~ html
-<h1 *ngIf = "expression; else varElement">Content</h1>
-<h2 #varElement>No Content</h2>
+<h1 *ngIf = "expression; else elseBlock">Content</h1>
+<h2 #elseBlock>No Content</h2>
 ~~~
 
-Outra forma é declarar um componente que declara qual componente ira ser renderizado de acordo com
-a expressão
+Outra forma é definir um elemento que renderiza conforme a condição.
 
 ~~~ html
 <div *ngIf="condition; then thenBlock else elseBlock"></div>

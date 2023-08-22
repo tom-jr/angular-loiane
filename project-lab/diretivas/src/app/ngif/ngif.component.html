@@ -1,0 +1,21 @@
+<div class="container-md">
+  <h3 class="label-control">NgIf</h3>
+  <article>
+    <div class="row">
+      <button class="btn btn-primary col-1" (click)="condition =!condition">Click me</button>
+    </div>
+    <div *ngIf="condition; then thenBlock else elseBlock "></div>
+    <div class="row">
+      <ng-template #thenBlock>
+        <div class="text-success">Then</div>
+      </ng-template>
+    </div>
+    <div class="row">
+      <ng-template #elseBlock>
+        <div class="text-warning">Else</div>
+      </ng-template>
+    </div>
+  </article>
+
+<div *ngIf="condition as value" class="text-success">{{value}}</div>
+</div>
