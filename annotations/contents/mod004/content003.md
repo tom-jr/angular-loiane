@@ -27,6 +27,7 @@ NgSwitchCaseDefault como caso final.
 </container-element>
 ~~~
 
+Aninhamento de elementos em um dos cases
 ~~~ html
 <container-element [ngSwitch]="switch_expression">
         <some-element *ngSwitchCase="match_expression_1">...</some-element>

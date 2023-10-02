@@ -1,133 +1,152 @@
 <div class="container">
   <section class="property-binding">
-
-    <article *ngIf="aula == 1">
-      <h3>Interpolation</h3>
-      <p>String renderizada com interpolation: <a href="{{url}}"> {{url}} </a></p>
-      <p>Interpolação de expressão matemática: 1 + 1 = {{1 + 1}}</p>
-      <p>Interpolação de expressão matemática com chamada de método: 1 + 1 + 1 = {{1 + twoTermsSum(1, 1)}}</p>
-      <p>Interpolação de expressões booleans: <b>true</b> || <b>false</b> = {{true || false}}</p>
-      <p>Interpolação de expressões booleans: <b>true</b> && <b>false</b> = {{true && false}}</p>
-    </article>
-
-    <article *ngIf="aula == 1">
-      <h3>Property-binding</h3>
-      <img ngSrc="{{urlImage}}" width="400" height="300">
-      <img [ngSrc]="urlImage" width="400" height="300">
-      <img bind-ngSrc="urlImage" width="400" height="300">
-    </article>
-
-    <article *ngIf="aula == 2">
-      <label class="col-form-label-lg">Selecione o Alerta a exibir</label>
-      <select [(ngModel)]="model" class="form-select" aria-label="Default select example">
-        <option *ngFor="let option of options" value="{{option.value}}">{{option.label}}</option>
+    <br>
+    <div class="form-floating">
+      <select #selectElement
+              (change)="changeAula(selectElement.value)"
+              class="form-select"
+              id="floatingSelect"
+              aria-label="Floating label select example">
+        <option value="1">Aula 001</option>
+        <option value="2">Aula 002</option>
+        <option value="3">Aula 003</option>
+        <option value="4">Aula 004</option>
+        <option value="5">Aula 005</option>
+        <option value="6">Aula 006</option>
+        <option value="7">Aula 007</option>
+        <option value="8">Aula 008</option>
       </select>
+      <label for="floatingSelect">Selecione a aula</label>
+    </div>
+    <div class="container-sm" [ngSwitch]="aula">
+      <article *ngSwitchCase="1">
+        <h3>Interpolation</h3>
+        <p>String renderizada com interpolation: <a href="{{url}}"> {{url}} </a></p>
+        <p>Interpolação de expressão matemática: 1 + 1 = {{1 + 1}}</p>
+        <p>Interpolação de expressão matemática com chamada de método: 1 + 1 + 1 = {{1 + twoTermsSum(1, 1)}}</p>
+        <p>Interpolação de expressões booleans: <b>true</b> || <b>false</b> = {{true || false}}</p>
+        <p>Interpolação de expressões booleans: <b>true</b> && <b>false</b> = {{true && false}}</p>
+      </article>
 
-      <div class="alert" [class.alert-primary]="model == 'alert-primary'"
-           [style.display]="model == 'alert-primary' ? 'block':'none'" role="alert">
-        A simple primary alert—check it out!
-      </div>
-      <div class="alert " role="alert" [class.alert-secondary]="model == 'alert-secondary'"
-           [style.display]="model == 'alert-secondary' ? 'block':'none'">
-        A simple secondary alert—check it out!
-      </div>
-      <div class="alert " [class.alert-success]="model == 'alert-success'" role="alert"
-           [style.display]="model == 'alert-success' ? 'block':'none'">
-        A simple success alert—check it out!
-      </div>
-      <div class="alert " [class.alert-danger]="model == 'alert-danger'" role="alert"
-           [style.display]="model == 'alert-danger' ? 'block':'none'">
-        A simple danger alert—check it out!
-      </div>
-      <div class="alert " [class.alert-warning]="model == 'alert-warning'" role="alert"
-           [style.display]="model == 'alert-warning' ? 'block':'none'">
-        A simple warning alert—check it out!
-      </div>
-      <div class="alert " [class.alert-info]="model == 'alert-info'" role="alert"
-           [style.display]="model == 'alert-info' ? 'block':'none'">
-        A simple info alert—check it out!
-      </div>
-      <div class="alert " [class.alert-light]="model == 'alert-light'" role="alert"
-           [style.display]="model == 'alert-light' ? 'block':'none'">
-        A simple light alert—check it out!
-      </div>
-      <div class="alert " [class.alert-dark]="model == 'alert-dark'" role="alert"
-           [style.display]="model == 'alert-dark' ? 'block':'none'">
-        A simple dark alert—check it out!
-      </div>
+      <article *ngSwitchCase="2">
+        <h3>Property-binding</h3>
+        <img ngSrc="{{urlImage}}" width="400" height="300">
+        <img [ngSrc]="urlImage" width="400" height="300">
+        <img bind-ngSrc="urlImage" width="400" height="300">
+      </article>
+
+      <article *ngSwitchCase="3">
+        <label class="col-form-label-lg">Selecione o Alerta a exibir</label>
+        <select [(ngModel)]="model" class="form-select" aria-label="Default select example">
+          <option *ngFor="let option of options" value="{{option.value}}">{{option.label}}</option>
+        </select>
+
+        <div class="alert" [class.alert-primary]="model == 'alert-primary'"
+             [style.display]="model == 'alert-primary' ? 'block':'none'" role="alert">
+          A simple primary alert—check it out!
+        </div>
+        <div class="alert " role="alert" [class.alert-secondary]="model == 'alert-secondary'"
+             [style.display]="model == 'alert-secondary' ? 'block':'none'">
+          A simple secondary alert—check it out!
+        </div>
+        <div class="alert " [class.alert-success]="model == 'alert-success'" role="alert"
+             [style.display]="model == 'alert-success' ? 'block':'none'">
+          A simple success alert—check it out!
+        </div>
+        <div class="alert " [class.alert-danger]="model == 'alert-danger'" role="alert"
+             [style.display]="model == 'alert-danger' ? 'block':'none'">
+          A simple danger alert—check it out!
+        </div>
+        <div class="alert " [class.alert-warning]="model == 'alert-warning'" role="alert"
+             [style.display]="model == 'alert-warning' ? 'block':'none'">
+          A simple warning alert—check it out!
+        </div>
+        <div class="alert " [class.alert-info]="model == 'alert-info'" role="alert"
+             [style.display]="model == 'alert-info' ? 'block':'none'">
+          A simple info alert—check it out!
+        </div>
+        <div class="alert " [class.alert-light]="model == 'alert-light'" role="alert"
+             [style.display]="model == 'alert-light' ? 'block':'none'">
+          A simple light alert—check it out!
+        </div>
+        <div class="alert " [class.alert-dark]="model == 'alert-dark'" role="alert"
+             [style.display]="model == 'alert-dark' ? 'block':'none'">
+          A simple dark alert—check it out!
+        </div>
 
 
-      <div class="alert {{model}} d-flex" role="alert">
-        Muda de acordo com a seleção
-      </div>
-    </article>
+        <div class="alert {{model}} d-flex" role="alert">
+          Muda de acordo com a seleção
+        </div>
+      </article>
 
-    <article *ngIf="aula == 3">
+      <article *ngSwitchCase="4">
 
-      <div class="container-sm">
         <div class="container-sm">
-          <button type="button" class="btn btn-primary" (click)="onClick()"> Click on me</button>
+          <div class="container-sm">
+            <button type="button" class="btn btn-primary" (click)="onClick()"> Click on me</button>
+          </div>
+
+          <div class="mb-3">
+            <label class="input-group">Input</label>
+            <input class="form-control" type="text" (keyup)="onKeyUp($event)">
+          </div>
+
+          <div class="mb-3">
+            <label class="input-group">Input easy way</label>
+            <input #input class="form-control" type="text" (keyup)="onKeyUp2(input.value)">
+          </div>
         </div>
 
-        <div class="mb-3">
-          <label class="input-group">Input</label>
-          <input class="form-control" type="text" (keyup)="onKeyUp($event)">
+      </article>
+
+      <article *ngSwitchCase="5">
+        <h2>Tow way dataBinding</h2>
+        <div class="container-sm">
+          <input #in [value]="name"
+                 (input)="onInput(in.value)"
+                 class="form-control" type="text" placeholder="nome" aria-label="default input example">
+          <label class="col-form-label-lg">{{name}}</label>
         </div>
 
-        <div class="mb-3">
-          <label class="input-group">Input easy way</label>
-          <input #input class="form-control" type="text" (keyup)="onKeyUp2(input.value)">
+        <div class="container-sm">
+          <h3>Exemplo Utilizando o ngModel e ngModelChange</h3>
+          <input #in2 [ngModel]="name2"
+                 (ngModelChange)="onInput(in2.value, 2)"
+                 class="form-control" type="text" placeholder="nome" aria-label="default input example">
+          <label class="col-form-label-lg">{{name2}}</label>
         </div>
-      </div>
+        <div class="container-sm">
+          <h3>Exemplo Utilizando o [(ngModel)]</h3>
+          <input #in3 [(ngModel)]="name3"
+                 class="form-control" type="text" placeholder="nome" aria-label="default input example">
+          <label class="col-form-label-lg">{{name3}}</label>
+        </div>
+      </article>
 
-    </article>
+      <article *ngSwitchCase="6">
+        <div class="container-sm">
+          <h3> Input Property</h3>
 
-    <article *ngIf="aula == 4">
-      <h2>Tow way dataBinding</h2>
-      <div class="container-sm">
-        <input #in [value]="name"
-               (input)="onInput(in.value)"
-               class="form-control" type="text" placeholder="nome" aria-label="default input example">
-        <label class="col-form-label-lg">{{name}}</label>
-      </div>
+          <app-input [property-custom]="propertySend"></app-input>
+        </div>
+      </article>
 
-      <div class="container-sm">
-        <h3>Exemplo Utilizando o ngModel e ngModelChange</h3>
-        <input #in2 [ngModel]="name2"
-               (ngModelChange)="onInput(in2.value, 2)"
-               class="form-control" type="text" placeholder="nome" aria-label="default input example">
-        <label class="col-form-label-lg">{{name2}}</label>
-      </div>
-      <div class="container-sm">
-        <h3>Exemplo Utilizando o [(ngModel)]</h3>
-        <input #in3 [(ngModel)]="name3"
-               class="form-control" type="text" placeholder="nome" aria-label="default input example">
-        <label class="col-form-label-lg">{{name3}}</label>
-      </div>
-    </article>
+      <article *ngSwitchCase="7">
+        <div class="container-sm">
+          <h3>Output property</h3>
+          <app-output [valorInicial]="num" (valorEmit)="onEmitValue($event)"></app-output>
+          <label class="col-form-label-lg"> valor emitido do component: {{valorEmitido}}</label>
+        </div>
+      </article>
 
-    <article *ngIf="aula == 5">
-      <div class="container-sm">
-        <h3> Input Property</h3>
-
-        <app-input [property-custom]="propertySend"></app-input>
-      </div>
-    </article>
-
-    <article *ngIf="aula == 6">
-      <div class="container-sm">
-        <h3>Output property</h3>
-        <app-output [valorInicial]="num" (valorEmit)="onEmitValue($event)"></app-output>
-        <label class="col-form-label-lg"> valor emitido do component: {{valorEmitido}}</label>
-      </div>
-    </article>
-
-    <article *ngIf="aula == 7">
-      <div class="container-sm">
-        <h3>Uso do ViewChild</h3>
-        <label class="col-form-label-lg">Name</label>
-        <input type="text" #input (input)="inputChange()">
-      </div>
-    </article>
+      <article *ngSwitchCase="8">
+        <div class="container-sm">
+          <h3>Uso do ViewChild</h3>
+          <label class="col-form-label-lg">Name</label>
+          <input type="text" #input (input)="inputChange()">
+        </div>
+      </article>
+    </div>
   </section>
 </div>

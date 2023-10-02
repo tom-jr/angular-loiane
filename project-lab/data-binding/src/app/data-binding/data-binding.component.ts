@@ -9,7 +9,7 @@ export class DataBindingComponent {
 
   url: string = 'https://www.loaine.com';
   urlImage: string = 'http://lorempixel.com.br/500/400/?1';
-  aula = 7;
+  aula = 1;
   options = [
     {label: 'Primary', value: 'alert-primary'},
     {label: 'Secondary', value: 'alert-secondary'},
@@ -48,7 +48,7 @@ export class DataBindingComponent {
 
   }
 
-  onInput(value: string, n= 0) {
+  onInput(value: string, n = 0) {
 
     n == 0 ? this.name = value : this.name2 = value;
 
@@ -61,5 +61,9 @@ export class DataBindingComponent {
 
   inputChange() {
     console.log(this.element.nativeElement.value);
+  }
+
+  changeAula(aulaNumero: any) {
+    this.aula = aulaNumero;
   }
 }
