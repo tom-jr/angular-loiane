@@ -1,1 +1,14 @@
-<app-ngif></app-ngif>
+<div class="container">
+  <h2>Diretivas</h2>
+  <select #select
+          [style]="{'width':'30%', 'height':'1.9em', 'margin':'1.5em'}"
+          (change)="onSelectAula(select.value)">
+    <option value="1">NgIf & SwitchCase</option>
+    <option selected value="2">NgFor</option>
+  </select>
+</div>
+
+<div class="container-sm" [ngSwitch]="aula">
+  <app-ngif *ngSwitchCase="1"></app-ngif>
+  <app-ngfor *ngSwitchCase="2"></app-ngfor>
+</div>
