@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-ngif',
@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
 })
 export class NgifComponent {
   condition: boolean = false;
+  day: number = 0;
 
+  changeWeekDay() {
+    this.day = this.day === 6 ? 0 : ++ this.day;
+  }
 }

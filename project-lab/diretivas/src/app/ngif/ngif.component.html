@@ -1,4 +1,4 @@
-<div class="container-md">
+<div class="container-md card">
   <h3 class="label-control">NgIf</h3>
   <article>
     <div class="row">
@@ -16,6 +16,23 @@
       </ng-template>
     </div>
   </article>
-
 <div *ngIf="condition as value" class="text-success">{{value}}</div>
+</div>
+
+<div class="container-md card" style="margin-top: 20px">
+  <h3 class="label-control">NgSwitchCase</h3>
+  <article style="padding: 5px">
+    <div [ngSwitch]="day">
+      <h4> Day of week </h4>
+      <button class="btn btn-primary" (click)="changeWeekDay()">Click me</button>
+      <div *ngSwitchCase="0" class="p-3 mb-2 text-primary bg-info-subtle">Sunday</div>
+      <div *ngSwitchCase="1" class="p-3 mb-2 text-primary bg-info-subtle">Monday</div>
+      <div *ngSwitchCase="2" class="p-3 mb-2 text-primary bg-info-subtle">Tuesday</div>
+      <div *ngSwitchCase="3" class="p-3 mb-2 text-primary bg-info-subtle">Wednesday</div>
+      <div *ngSwitchCase="4" class="p-3 mb-2 text-primary bg-info-subtle">Thursday</div>
+      <div *ngSwitchCase="5" class="p-3 mb-2 text-primary bg-info-subtle">Friday</div>
+      <div *ngSwitchCase="6" class="p-3 mb-2 text-primary bg-info-subtle">Saturday</div>
+    </div>
+
+  </article>
 </div>
