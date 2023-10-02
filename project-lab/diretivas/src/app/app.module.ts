@@ -4,12 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { NgifComponent } from './ngif/ngif.component';
 import { NgforComponent } from './ngfor/ngfor.component';
+import { NgContentComponent } from './ng-content/ng-content.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NgifComponent,
-    NgforComponent
+    NgforComponent,
+    NgContentComponent
   ],
   imports: [
     BrowserModule

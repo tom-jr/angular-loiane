@@ -7,7 +7,7 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
   title = 'diretivas';
-  aula = 2;
+  aula = 3;
 
   onSelectAula(aula: any) {
     console.log(aula);

@@ -5,10 +5,16 @@
           (change)="onSelectAula(select.value)">
     <option value="1">NgIf & SwitchCase</option>
     <option selected value="2">NgFor</option>
+    <option selected value="3">Content</option>
   </select>
 </div>
 
 <div class="container-sm" [ngSwitch]="aula">
   <app-ngif *ngSwitchCase="1"></app-ngif>
   <app-ngfor *ngSwitchCase="2"></app-ngfor>
+  <app-ng-content *ngSwitchCase="3">
+    <div class="hello">Hello World!</div>
+    <div class="desc">A exemple of ng-content</div>
+    <div class="nada">Nada</div>
+  </app-ng-content>
 </div>
