@@ -1,3 +1,3 @@
 <ul style="list-style: none">
-  <li *ngFor="let curso of cursos">{{curso.uuid}} - {{curso.nome}}</li>
+  <li *ngFor="let curso of cursos">{{curso.uuid}} - {{curso.nome | uppercase:['1', '2', '4']}}</li>
 </ul>

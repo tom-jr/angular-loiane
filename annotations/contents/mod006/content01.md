@@ -1,6 +1,6 @@
 # Pipes
 
-Pipes transformam valores para podermos mostrar dentro de um template
+Pipes transformam valores para podermos mostra-los dentro de templates
 
 Pipes para formatar datas
 Pipes para apresentar objetos em formato JSON
@@ -12,29 +12,30 @@ Entre outros
 
 quando desejamos adicionar um piper fazemos do seguinte modo
 
-~~~ html
+```html
 <p>{{att |pipe1}}</p>
-~~~
+```
 
 Dessa forma sera aplicado o Pipe.
 Os pipes são aplicado na ordem de esquerda para a direita quando se aninha pipes:
 
 
-~~~ html
+```html
 <p>{{att | pipe1 | pipe2 | pipe3}}</p>
-~~~
+```
 
 
 ## Criar um PIPE
 
-~~~ bash
+declare o pipe personalizado no modulo que deseja fazer uso
+```bash
 ng g pipe name-pipe
-~~~
+```
 
 Assim que cria o  Pipe ele vai para o declarations do module automaticamente.
 O pipe vem com um método chamado transforme, onde configuramos as mudanças que ele realiza.
 
-~~~ javascript
+```typescript
 @Pipe({
   name: 'camelCase'
 })
@@ -55,4 +56,4 @@ export class CamelCasePipe implements PipeTransform {
     v.substring(1).toLowerCase();
   }
 }
-~~~
+```
