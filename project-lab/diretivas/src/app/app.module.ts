@@ -8,6 +8,7 @@ import { NgContentComponent } from './ng-content/ng-content.component';
 import { YellowBackgroundDirective } from './directives/yellow-background.directive';
 import { GenericOneComponent } from './generic-one/generic-one.component';
 import { HightlightDirective } from './directives/hightlight.directive';
+import { Hightlight2Directive } from './directives/hightlight2.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HightlightDirective } from './directives/hightlight.directive';
     NgContentComponent,
     YellowBackgroundDirective,
     GenericOneComponent,
-    HightlightDirective
+    HightlightDirective,
+    Hightlight2Directive
   ],
   imports: [
     BrowserModule
