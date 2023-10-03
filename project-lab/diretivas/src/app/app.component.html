@@ -4,8 +4,9 @@
           [style]="{'width':'30%', 'height':'1.9em', 'margin':'1.5em'}"
           (change)="onSelectAula(select.value)">
     <option value="1">NgIf & SwitchCase</option>
-    <option selected value="2">NgFor</option>
-    <option selected value="3">Content</option>
+    <option  value="2">NgFor</option>
+    <option  value="3">Content</option>
+    <option selected value="4">Custom directive</option>
   </select>
 </div>
 
@@ -17,4 +18,5 @@
     <div class="desc">A exemple of ng-content</div>
     <div class="nada">Nada</div>
   </app-ng-content>
+  <app-generic-one *ngSwitchCase="4"></app-generic-one>
 </div>

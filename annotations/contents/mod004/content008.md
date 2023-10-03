@@ -1,6 +1,7 @@
 # Criar directive
 
 Utilizamos o comando do CLI:
+
 ~~~ bash
 ng g directive name-directive
 ~~~
@@ -22,17 +23,15 @@ export class NameDirective{
 
 O decorator @Directive é do AngularCore.
 ele tem um metadado chamado **selector**, o qual é entre coxetes.
-identifica o alias para usar essa directive em algum elemento/component DOM
-Caso adicionarmos no selector um prefixo com um selector de um elemento DOM ou um component
-essa diretiva so ira funcionar com esse tipo de elemento:
+identifica o aliás para usar essa directive em algum elemento/component DOM
+Caso adicionarmos no selector um prefixo de um selector de elemento DOM ou de component
+essa diretiva so irá funcionar com esse tipo de elemento especificado no prefixo:
 
 ~~~ javascript
 selector:'p[name-selector]'
 ~~~
 
-
-
-Para que seja aplicado customização no elemento que for utilizar essa diretiva vamos seguir os 
+Para aplicar customização no elemento que for utilizar essa diretiva vamos seguir os
 passos:
 
 injetamos pelo construtor o ElementRef
@@ -62,9 +61,8 @@ export class NameDirective{
 }
 ~~~
 
-Então no corpo do construtor iremos chamar o método do renderer para realizar 
+Então no corpo do construtor iremos chamar o método do renderer para realizar
 qualquer alteração a ser disponibilizada pela Diretiva.
-
 
 ~~~ javascript
 
