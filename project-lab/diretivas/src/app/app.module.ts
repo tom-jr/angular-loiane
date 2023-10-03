@@ -7,6 +7,7 @@ import { NgforComponent } from './ngfor/ngfor.component';
 import { NgContentComponent } from './ng-content/ng-content.component';
 import { YellowBackgroundDirective } from './directives/yellow-background.directive';
 import { GenericOneComponent } from './generic-one/generic-one.component';
+import { HightlightDirective } from './directives/hightlight.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { GenericOneComponent } from './generic-one/generic-one.component';
     NgforComponent,
     NgContentComponent,
     YellowBackgroundDirective,
-    GenericOneComponent
+    GenericOneComponent,
+    HightlightDirective
   ],
   imports: [
     BrowserModule

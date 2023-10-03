@@ -4,7 +4,7 @@ Nos utilizaremos o **HostListener** quando quisermos definir uma função relaci
 O HostListener vai ficar ouvindo Eventos do elemento. Podemos criar quantos quisermos.
 
 ~~~ javascript
-@HostListener('eventFunction()') function(){}
+@HostListener('event-name') function(){}
 ~~~
 
 Na propria função podemos modificar os att do Elemento que usa a diretiva. E
