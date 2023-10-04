@@ -5,6 +5,7 @@ import {CursosComponent} from "./cursos.component";
 import {CursosFormComponent} from "./cursos-form/cursos-form.component";
 import {TestePipe} from "../teste.pipe";
 import {UppercasePipe} from "./pipes/uppercase.pipe";
+import { AsyncDataComponent } from './async-data/async-data.component';
 
 
 
@@ -14,7 +15,8 @@ import {UppercasePipe} from "./pipes/uppercase.pipe";
     CursosComponent,
     CursosFormComponent,
     TestePipe,
-    UppercasePipe
+    UppercasePipe,
+    AsyncDataComponent
   ],
   imports: [
     CommonModule

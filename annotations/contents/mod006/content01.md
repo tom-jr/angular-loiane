@@ -57,3 +57,25 @@ export class CamelCasePipe implements PipeTransform {
   }
 }
 ```
+##  Pipe Puro & Impuro
+Um pipe puro não é ouvinte das transformações que ocorrem no parâmetro do seu método transform.
+Ja o impuro fica ouvindo as mudanças do parâmetro de seu método transform.
+
+metadado pure
+
+```typescript
+import {Pipe, PipeTransform} from "@angular/core";
+
+@Pipe({
+    selector: 'customPipe',
+    pure: false
+})
+export class CustomPipe implements PipeTransform {
+
+    transform(value: unknown, ...args: unknown): unknown {
+        return null;
+    }
+}
+```
+# Pipes Async
+São usados para capturar dados de promises e Observables

@@ -108,7 +108,9 @@
 ## Modulo006 Pipes
 
 - [**Pipes**](/annotations/contents/mod006/content01.md)
-
+  - Criar pipes
+  - Pipes Puros & Impuros
+  - Pipes Async
 
 ## Modulo007 Rotas
 
