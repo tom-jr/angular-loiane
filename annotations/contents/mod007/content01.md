@@ -1,35 +1,40 @@
-# Rotas
+# Router 
+Angular Router é um serviço opcional que renderiza um component para determinada URL.
+Angular Router faz parte do pacote **@angular/router**
 
-Para criar rotas:
+## Configuração
+Configurar rotas a partir do RouterModule.forRoot()
 
-- Criamos um arquivo com nome: **name.routing.ts**
+**app.routing.ts**
 
-- Criamos uma constante chamada **APP_ROUTES** do type Routes do angular/router:
+```typescript
+import {RouterModule, Routes} from "@angular/router";
 
-~~~ javascript
-const APP_ROUTES: Routes = [
-    {path:'',component: }
-];
-~~~
-Adicionamos um objeto no APP_ROUTES com o **path**, que é o caminho URI e o **component** o componente
-que sera renderizado referente aquele path
+const appRouter: Routes = [
+    {path: 'path-name', component: NameComponent}
+]
 
-- Criar uma variável routing do tipo ModuleWithProviders.
+@NgModule({
+    imports: [RouterModule.forRoot(appRouter)],
+    exports: [RouterModule]
+})
+export class AppRouting {
+}
+```
+Devemos então importar no nosso modulo principal.
 
-~~~ javascript
-const APP_ROUTES: Routes = [
-    { path: 'cursos', component: CursosComponent },
-    { path: 'login', component: LoginComponent },
-    { path: '', component: HomeComponent }
-];
+```typescript
+import {AppRouting} from "./app.routing";
 
-export const routing: ModuleWithProviders<RouterModule> = RouterModule.forRoot(APP_ROUTES);
-~~~
+@NgModule({
+    imports: [
+        // imports
+    ],
+    exports: [
+        AppRouting
+    ]
+})
+export class AppModule {
 
-
-- Adicionar o routes no app.module no metadado imports
-
-- Adicionar a tag ***<router-outlet>*** no app.component.html
-
-Assim as rotas estarão criadas. Caso adicionar os path nas URL os componentes
-referentes serão renderizados.
+}
+```
