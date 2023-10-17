@@ -18,7 +18,7 @@ Utilizamos a diretiva ***routerLink*** para definir a rota em cada opção
 
 ## Aplicando css em rotas ativas
 
-a diretiva routerLinkActive adiciona o css de class active quando a rota for a ativa.
+a diretiva routerLinkActive(@angular/routes) adiciona o css de class active quando a rota for a ativa.
 Tudo de forma automática.
 
 ## Definindo e extraindo paramentos de rotas

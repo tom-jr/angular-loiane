@@ -1,2 +1,25 @@
-<p>app works</p>
-<router-outlet></router-outlet>
+<div>
+  <ul class="nav nav-pills d-flex mb-3 bg-dark-subtle">
+    <li class="nav-item p-2">
+      <a class="nav-link"
+         routerLink="login"
+         routerLinkActive="active"
+      >Login</a>
+    </li>
+    <li class="nav-item p-2">
+      <a class="nav-link"
+         routerLink="cursos"
+         routerLinkActive="active"
+      >Cursos</a>
+    </li>
+    <li class="nav-item ms-auto p-2 bg-body-secondary">
+      <a class="nav-link"
+         routerLink=""
+         aria-current="page">Home</a>
+    </li>
+  </ul>
+<div class="container-sm">
+  <router-outlet></router-outlet>
+</div>
+
+</div>
